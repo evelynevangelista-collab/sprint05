@@ -66,3 +66,8 @@ app.get("/total-mensagens", async (req, res) => {
   try { res.json({ total: (await lerMensagens()).length }); }
   catch (erro) { res.status(500).json({ erro: "Falha na contagem." }); }
 });
+
+// — [SPRINT 01 — SERVIDOR: iniciado na porta 3000; mantido ao longo das aulas] —
+app.listen(PORT, () => {
+  console.log(`Servidor em http://localhost:${PORT}`);
+});
